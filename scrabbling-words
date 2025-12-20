@@ -4,7 +4,7 @@ words:
     The game will prompt the player to guess the exact word using tiles from the rack, and the player will be asked to enter the word. The player has up to
     three attempts to guess a scrambled word.
 
-game: 
+game:
   settings:
     max_word_length: 12
     max_attempts: 3
