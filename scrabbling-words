@@ -1,4 +1,4 @@
-wrds:
+words:
   name: words
   description: >
     The game will prompt the player to guess the exact word using tiles from the rack, and the player will be asked to enter the word. The player has up to
