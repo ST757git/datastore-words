@@ -1,0 +1,61 @@
+repository:
+  name: word-scramble-game
+  description: >
+    A simple word scramble game where the player has up to
+    three attempts to guess a scrambled word.
+
+game:
+  settings:
+    max_word_length: 12
+    max_attempts: 3
+
+  words:
+    - python
+    - developer
+    - algorithm
+    - function
+    - variable
+    - iteration
+    - coding
+    - design
+
+  flow:
+    - step: start
+      description: Game starts
+
+    - step: validate_word
+      description: Ensure the word length is less than or equal to 12 characters
+
+    - step: generate_word
+      description: Launch a random scrambled word from the word list
+
+    - step: request_guess
+      description: Prompt the player to guess and enter the word
+
+    - step: check_guess
+      decision: guess_correct
+      outcomes:
+        yes:
+          next_step: player_wins
+        no:
+          next_step: attempts_check
+
+    - step: attempts_check
+      decision: attempts_remaining
+      outcomes:
+        yes:
+          next_step: retry_prompt
+        no:
+          next_step: player_loses
+
+    - step: retry_prompt
+      description: Prompt the player to try again
+      next_step: request_guess
+
+    - step: player_wins
+      description: Player wins the game
+      end: true
+
+    - step: player_loses
+      description: Player fails all attempts and loses
+      end: true
