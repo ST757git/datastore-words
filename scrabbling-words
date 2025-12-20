@@ -1,7 +1,7 @@
-repository:
-  name: word-scramble-game
+scrabbling game:
+  name: scrabbling-words
   description: >
-    A simple word scramble game where the player has up to
+    The game will prompt the player to guess the exact word using tiles from the rack, and the player will be asked to enter the word. The player has up to
     three attempts to guess a scrambled word.
 
 game:
@@ -54,7 +54,7 @@ game:
 
     - step: player_wins
       description: Player wins the game
-      end: true
+      end: true 
 
     - step: player_loses
       description: Player fails all attempts and loses
