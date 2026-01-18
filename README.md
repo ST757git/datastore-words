@@ -6,6 +6,7 @@ wrds:
 
 game: 
   settings:
+    min_word_length: 5
     max_word_length: 12
     max_attempts: 3
 
