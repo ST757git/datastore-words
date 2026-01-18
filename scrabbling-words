@@ -1,7 +1,7 @@
 words:
   name: words
   description: >
-    The game will prompt the player to guess the exact word using tiles from the rack, and the player will be asked to enter the word. The player has up to
+    when the player launches the game, the game will randomly load a word, initialise the tile bag of characters and display a text-based board and prompt the player to guess the exact word using tiles from the rack, and the player will be asked to enter the word. The player has up to
     three attempts to guess a scrambled word.
 
 game:
